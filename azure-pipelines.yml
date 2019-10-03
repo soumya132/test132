@@ -14,7 +14,7 @@
 - pool:
   vmImage: 'ubuntu-latest'
 
-- steps:
+steps:
 - task: Maven@3
   inputs:
     mavenPomFile: 'pipelines-java-master/pipelines-java-master/pom.xml'
