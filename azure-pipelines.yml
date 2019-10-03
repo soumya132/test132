@@ -12,7 +12,11 @@ pool:
 steps:
 - task: Maven@3
   inputs:
-    mavenPomFile: 'pipelines-java-master/pipelines-java-master/pom.xml'
+    mavenPomFile: '- task: dependency-check-build-task@5
+  inputs:
+    projectName: 'test2'
+    scanPath: 'pipelines-java-master/pipelines-java-master/'
+    format: 'HTML'pom.xml'
     mavenOptions: '-Xmx3072m'
     javaHomeOption: 'JDKVersion'
     jdkVersionOption: '1.8'
