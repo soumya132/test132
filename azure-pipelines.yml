@@ -20,8 +20,7 @@ steps:
     publishJUnitResults: true
     testResultsFiles: '**/surefire-reports/TEST-*.xml'
     goals: 'package'
-- task: dependency-check-build-task@5
+
+- task: WhiteSource Bolt@19
   inputs:
-    projectName: 'test3'
-    scanPath: 'pipelines-java-master\pipelines-java-master'
-    format: 'HTML'
+    cwd: 'pipelines-java-master/pipelines-java-master/'
